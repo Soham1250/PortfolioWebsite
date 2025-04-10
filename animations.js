@@ -29,7 +29,7 @@ const techSymbols = [
 class MouseTrail {
     constructor() {
         this.trails = [];
-        this.maxTrails = 25; 
+        this.maxTrails = 45; // Increased by 20% from 25 to 30
         this.trailContainer = document.createElement('div');
         this.trailContainer.className = 'trail-container';
         document.body.appendChild(this.trailContainer);
@@ -39,9 +39,9 @@ class MouseTrail {
         this.lastMouseX = 0;
         this.lastMouseY = 0;
         this.isMoving = false;
-        this.movementThreshold = 5; 
+        this.movementThreshold = 3; 
         this.lastTrailTime = 0;
-        this.trailInterval = 100; 
+        this.trailInterval = 80; // Decreased by 20% from 100 to 80 to create trails more frequently
         
         this.init();
     }
@@ -73,6 +73,24 @@ class MouseTrail {
                 this.lastTrailTime = now;
             }
         });
+        
+        // Track touch movement for mobile
+        document.addEventListener('touchmove', (e) => {
+            // Get touch position
+            const touch = e.touches[0];
+            this.mouseX = touch.clientX;
+            this.mouseY = touch.clientY;
+            
+            // Always consider touch movement as moving
+            this.isMoving = true;
+            
+            // Add trail for touch movement
+            const now = Date.now();
+            if (now - this.lastTrailTime > this.trailInterval) {
+                this.addTrail();
+                this.lastTrailTime = now;
+            }
+        }, { passive: true });
         
         // Animation loop
         this.animate();
@@ -127,7 +145,7 @@ class MouseTrail {
         // Remove trail after animation completes
         setTimeout(() => {
             if (trail.parentNode === this.trailContainer) {
-                trailContainer.removeChild(trail);
+                this.trailContainer.removeChild(trail);
             }
         }, 1500);
     }

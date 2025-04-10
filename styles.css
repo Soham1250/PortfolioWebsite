@@ -387,6 +387,28 @@ section {
     margin-bottom: 0;
 }
 
+/* Custom icon styling for Flutter and other SVG icons */
+.custom-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(212, 175, 55, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.custom-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.skill-item:hover .custom-icon {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
 /* Projects Section */
 .projects {
     background-color: var(--dark-color);
@@ -462,6 +484,60 @@ section {
     display: flex;
     gap: 10px;
     margin-top: auto;
+}
+
+/* Highlight words animation */
+.highlight-word {
+    transition: all 0.3s ease;
+    font-weight: normal;
+    position: relative;
+    display: inline-block;
+    padding: 0 2px;
+}
+
+.project-card:hover .highlight-word {
+    font-weight: 700;
+    color: #D4AF37;
+    transform: translateY(-1px);
+    text-shadow: 0px 1px 2px rgba(212, 175, 55, 0.2);
+}
+
+.highlight-word::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #D4AF37;
+    transition: width 0.4s ease;
+    opacity: 0;
+}
+
+.project-card:hover .highlight-word::after {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Add staggered animation for multiple highlight words */
+.project-card:hover .highlight-word:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.project-card:hover .highlight-word:nth-child(2) {
+    transition-delay: 0.05s;
+}
+
+.project-card:hover .highlight-word:nth-child(3) {
+    transition-delay: 0.1s;
+}
+
+.project-card:hover .highlight-word:nth-child(4) {
+    transition-delay: 0.15s;
+}
+
+.project-card:hover .highlight-word:nth-child(5) {
+    transition-delay: 0.2s;
 }
 
 /* Contact Section */
