@@ -1,0 +1,41 @@
+// This is the Google Apps Script code that should be deployed as a web app
+// Copy and paste this into the Google Apps Script editor
+
+function doGet(e) {
+  return HtmlService.createHtmlOutput("The script is running correctly, but this service only accepts POST requests.");
+}
+
+function doPost(e) {
+  try {
+    // Get the spreadsheet by ID
+    var ss = SpreadsheetApp.openById("1T2cWiOsVJq2hJ6nk_WaL5jFqWNdypnD5DwEdWbQeRqg");
+    var sheet = ss.getSheetByName("Sheet1") || ss.getSheets()[0];
+    
+    // Check if headers exist, if not add them
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(["Name", "Email", "Subject", "Message"]);
+    }
+    
+    // Get form data
+    var name = e.parameter.name || "No Name";
+    var email = e.parameter.email || "No Email";
+    var subject = e.parameter.subject || "No Subject";
+    var message = e.parameter.message || "No Message";
+    
+    // Add data to sheet
+    sheet.appendRow([name, email, subject, message]);
+    
+    // Return success response
+    return ContentService.createTextOutput(JSON.stringify({
+      "result": "success",
+      "message": "Data added to spreadsheet"
+    })).setMimeType(ContentService.MimeType.JSON);
+    
+  } catch(error) {
+    // Return error response
+    return ContentService.createTextOutput(JSON.stringify({
+      "result": "error",
+      "error": error.toString()
+    })).setMimeType(ContentService.MimeType.JSON);
+  }
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham - Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home">Soham</a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times mobile-only" id="closeMenu"></i>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars mobile-only" id="openMenu"></i>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Soham</span></h1>
+            <h2>Full Stack Developer</h2>
+            <p>I build robust and scalable web & mobile applications</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">View Projects</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/Soham1250" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>About Me</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a passionate Full Stack Developer specializing in building robust and scalable web and mobile applications with React and Flutter. My focus is on creating intuitive user interfaces that enhance user experience while maintaining high performance standards.</p>
+                <p>I'm currently working on implementing microservices architecture and optimizing cloud-based solutions for student management systems and healthcare applications.</p>
+                <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and creating content that helps others learn and grow in software development.</p>
+                <div class="about-buttons">
+                    <a href="#contact" class="btn secondary-btn">Get in Touch</a>
+                </div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <h3>Frontend</h3>
+                    <p>React, TypeScript, JavaScript, HTML5, CSS3, Redux</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Mobile</h3>
+                    <p>Flutter, Dart, Ionic, Capacitor</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Backend</h3>
+                    <p>Node.js, Express.js, Firebase, MongoDB, MySQL</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Other</h3>
+                    <p>Python, AWS, Git, GitHub, Postman, Figma</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Skills</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-react" style="color: #D4AF37;"></i></div>
+                            <h4>React</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-js" style="color: #D4AF37;"></i></div>
+                            <h4>JavaScript</h4>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#D4AF37"><path d="M16.634 16.504c.87-.075 1.543-.84 1.5-1.754-.047-.914-.796-1.648-1.709-1.648h-.061a1.71 1.71 0 00-1.648 1.769c.03.479.226.914.494 1.206-1.048 2.038-2.621 3.536-5.005 4.795-1.603.838-3.296 1.154-4.944.93-1.378-.195-2.456-.81-3.116-1.799-.988-1.499-1.078-3.116-.255-4.734.6-1.17 1.499-2.023 2.099-2.443a9.96 9.96 0 01-.42-1.543C-.867 14.408-.416 18.752.932 20.805c1.004 1.498 3.057 2.456 5.304 2.456.6 0 1.23-.044 1.843-.194 3.897-.749 6.848-3.086 8.541-6.532zm5.348-3.746c-2.32-2.728-5.738-4.226-9.634-4.226h-.51c-.253-.554-.837-.899-1.498-.899h-.045c-.943 0-1.678.81-1.647 1.753.03.898.794 1.648 1.708 1.648h.074a1.69 1.69 0 001.499-1.049h.555c2.309 0 4.495.674 6.488 1.992 1.527 1.005 2.622 2.323 3.237 3.897.538 1.288.509 2.547-.045 3.597-.855 1.647-2.294 2.517-4.196 2.517-1.199 0-2.367-.375-2.967-.644-.36.298-.96.793-1.394 1.093 1.318.598 2.652.943 3.94.943 2.922 0 5.094-1.647 5.919-3.236.898-1.798.824-4.824-1.47-7.416zM6.49 17.042c.03.899.793 1.648 1.708 1.648h.06a1.688 1.688 0 001.648-1.768c0-.9-.779-1.647-1.693-1.647h-.06c-.06 0-.15 0-.226.029-1.243-2.098-1.768-4.347-1.572-6.772.12-1.828.72-3.417 1.797-4.735.9-1.124 2.593-1.68 3.747-1.708 3.236-.061 4.585 3.971 4.689 5.574l1.498.45C17.741 3.197 14.686.62 11.764.62 9.02.62 6.49 2.613 5.47 5.535 4.077 9.43 4.991 13.177 6.7 16.174c-.15.195-.24.539-.21.868z"/></svg></div>
+                        <h4>TypeScript</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-html5" style="color: #D4AF37;"></i></div>
+                        <h4>HTML5</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-css3-alt" style="color: #D4AF37;"></i></div>
+                        <h4>CSS3</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#D4AF37"><path d="M16.634 16.504c.87-.075 1.543-.84 1.5-1.754-.047-.914-.796-1.648-1.709-1.648h-.061a1.71 1.71 0 00-1.648 1.769c.03.479.226.914.494 1.206-1.048 2.038-2.621 3.536-5.005 4.795-1.603.838-3.296 1.154-4.944.93-1.378-.195-2.456-.81-3.116-1.799-.988-1.499-1.078-3.116-.255-4.734.6-1.17 1.499-2.023 2.099-2.443a9.96 9.96 0 01-.42-1.543C-.867 14.408-.416 18.752.932 20.805c1.004 1.498 3.057 2.456 5.304 2.456.6 0 1.23-.044 1.843-.194 3.897-.749 6.848-3.086 8.541-6.532zm5.348-3.746c-2.32-2.728-5.738-4.226-9.634-4.226h-.51c-.253-.554-.837-.899-1.498-.899h-.045c-.943 0-1.678.81-1.647 1.753.03.898.794 1.648 1.708 1.648h.074a1.69 1.69 0 001.499-1.049h.555c2.309 0 4.495.674 6.488 1.992 1.527 1.005 2.622 2.323 3.237 3.897.538 1.288.509 2.547-.045 3.597-.855 1.647-2.294 2.517-4.196 2.517-1.199 0-2.367-.375-2.967-.644-.36.298-.96.793-1.394 1.093 1.318.598 2.652.943 3.94.943 2.922 0 5.094-1.647 5.919-3.236.898-1.798.824-4.824-1.47-7.416zM6.49 17.042c.03.899.793 1.648 1.708 1.648h.06a1.688 1.688 0 001.648-1.768c0-.9-.779-1.647-1.693-1.647h-.06c-.06 0-.15 0-.226.029-1.243-2.098-1.768-4.347-1.572-6.772.12-1.828.72-3.417 1.797-4.735.9-1.124 2.593-1.68 3.747-1.708 3.236-.061 4.585 3.971 4.689 5.574l1.498.45C17.741 3.197 14.686.62 11.764.62 9.02.62 6.49 2.613 5.47 5.535 4.077 9.43 4.991 13.177 6.7 16.174c-.15.195-.24.539-.21.868z"/></svg></div>
+                        <h4>Redux</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Mobile Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-flutter" style="color: #D4AF37; font-size: 24px;"></i>
+                        </div>
+                        <h4>Flutter</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-code" style="color: #D4AF37; font-size: 24px;"></i>
+                        </div>
+                        <h4>Dart</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-mobile-alt" style="color: #D4AF37; font-size: 24px;"></i>
+                        </div>
+                        <h4>Ionic</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-bolt" style="color: #D4AF37;"></i></div>
+                        <h4>Capacitor</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Backend & Database</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-node-js" style="color: #D4AF37;"></i></div>
+                        <h4>Node.js</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-server" style="color: #D4AF37;"></i></div>
+                        <h4>Express.js</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-fire" style="color: #D4AF37;"></i></div>
+                        <h4>Firebase</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-database" style="color: #D4AF37;"></i></div>
+                        <h4>MongoDB</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-database" style="color: #D4AF37;"></i></div>
+                        <h4>MySQL</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Other Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-python" style="color: #D4AF37;"></i></div>
+                        <h4>Python</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-aws" style="color: #D4AF37;"></i></div>
+                        <h4>AWS</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-git-alt" style="color: #D4AF37;"></i></div>
+                        <h4>Git</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-github" style="color: #D4AF37;"></i></div>
+                        <h4>GitHub</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fas fa-paper-plane" style="color: #D4AF37;"></i></div>
+                        <h4>Postman</h4>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon"><i class="fab fa-figma" style="color: #D4AF37;"></i></div>
+                        <h4>Figma</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>SecureMe</h3>
+                        <p>An application that detects malicious links and URLs to protect users and their devices from security threats. Features security scoring, detailed threat analysis, and verdict classification.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>VirusTotal API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Soham1250/SecureMe" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Facial Recognition SDK</h3>
+                        <p>A Python-based facial recognition system that can be integrated into various applications for security and authentication.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>TensorFlow</span>
+                            <span>Flask</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Soham1250/Facial_Recognition_sdk.git" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>StudentPortal</h3>
+                        <p>A comprehensive Flutter application for managing student information, attendance, and academic performance.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Firebase</span>
+                            <span>Provider</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Soham1250/student_dashboard.git" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>DoctorBuddy</h3>
+                        <p>A Flutter-based clinic management application with role-based interfaces for doctors and receptionists. Features digital prescriptions, appointment scheduling, patient history tracking, and a responsive design for both mobile and tablet devices.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Dart</span>
+                            <span>Drawing Board</span>
+                            <span>Table Calendar</span>
+                            <span>PDF</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Soham1250/DoctorBuddy.git" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>QR Code Generator</h3>
+                        <p>A JavaScript application that generates QR codes for different types of data.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>QRCode.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Soham1250/QR_Code_generator.git" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>DiceWars</h3>
+                        <p>An interactive dice game built with JavaScript that simulates strategic territory conquest through dice rolls.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Canvas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Soham1250/DiceWars.git" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Contact Me</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>soham.pansare1250@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Mumbai, India</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Soham1250" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send Me A Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--  Alert Modal -->
+    <div id="cuteAlert" class="cute-alert">
+        <div class="cute-alert-content">
+            <div class="cute-alert-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="cute-alert-title">I'll be back! 💗</h3>
+            <p class="cute-alert-message">Thanks for reaching out! Your contact information has been saved. I'll get back to you super soon!</p>
+            <button id="cuteAlertClose" class="btn primary-btn cute-alert-btn">OK</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Soham</h3>
+                <p>Full Stack Developer</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Connect With Me</h4>
+                <div class="social-icons">
+                    <a href="https://github.com/Soham1250" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Soham. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>
