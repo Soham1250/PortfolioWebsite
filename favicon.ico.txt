@@ -1,0 +1,12 @@
+Note: This is a placeholder text file. 
+
+Since .ico files are binary files, we can't directly create them with text content. You'll need to convert the SVG to ICO format.
+
+Here's how to do it:
+
+1. Use an online converter like https://convertio.co/svg-ico/ or https://favicon.io/
+2. Upload the favicon.svg file we created
+3. Download the converted .ico file
+4. Replace this placeholder file with the downloaded .ico file
+
+Alternatively, you can use just the SVG favicon which is supported by all modern browsers.

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #D4AF37;
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .instructions {
+            max-width: 600px;
+            line-height: 1.6;
+            margin-top: 20px;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Favicon Generator for Your Portfolio</h1>
+    <canvas id="faviconCanvas" width="64" height="64"></canvas>
+    <div>
+        <button id="downloadPNG">Download PNG (64x64)</button>
+        <button id="downloadICO">Download as ICO</button>
+    </div>
+    
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Click "Download PNG" to save the 64x64 PNG version</li>
+            <li>Place the downloaded file in your portfolio folder</li>
+            <li>For ICO format, click "Download as ICO" or use an online converter like <a href="https://favicon.io/favicon-converter/" target="_blank">favicon.io</a></li>
+        </ol>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('faviconCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Draw background
+            ctx.fillStyle = '#1a1a1a';
+            ctx.fillRect(0, 0, 64, 64);
+            
+            // Draw rounded corners
+            const radius = 8;
+            ctx.fillStyle = '#1a1a1a';
+            ctx.beginPath();
+            ctx.moveTo(radius, 0);
+            ctx.lineTo(64 - radius, 0);
+            ctx.quadraticCurveTo(64, 0, 64, radius);
+            ctx.lineTo(64, 64 - radius);
+            ctx.quadraticCurveTo(64, 64, 64 - radius, 64);
+            ctx.lineTo(radius, 64);
+            ctx.quadraticCurveTo(0, 64, 0, 64 - radius);
+            ctx.lineTo(0, radius);
+            ctx.quadraticCurveTo(0, 0, radius, 0);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Draw text
+            ctx.fillStyle = '#D4AF37'; // Gold color
+            ctx.font = 'bold 40px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('S', 32, 32);
+            
+            // Download PNG
+            document.getElementById('downloadPNG').addEventListener('click', function() {
+                const link = document.createElement('a');
+                link.download = 'favicon.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+            
+            // Download ICO (this is a placeholder - ICO requires conversion)
+            document.getElementById('downloadICO').addEventListener('click', function() {
+                alert('To create an ICO file, please use an online converter like favicon.io\n\n1. Save the PNG first\n2. Upload it to favicon.io\n3. Download the ICO version');
+                window.open('https://favicon.io/favicon-converter/', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
