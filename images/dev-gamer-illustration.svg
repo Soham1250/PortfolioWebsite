@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gold Gradient -->
+  <circle cx="175" cy="175" r="170" fill="url(#goldGradient)" opacity="0.1"/>
+  
+  <!-- Gaming Controller Outline -->
+  <path d="M110 180 C110 160, 130 150, 150 150 L200 150 C220 150, 240 160, 240 180 L240 200 C240 220, 220 230, 200 230 L150 230 C130 230, 110 220, 110 200 Z" 
+        stroke="#D4AF37" stroke-width="3" fill="#121212"/>
+  
+  <!-- Controller D-Pad -->
+  <rect x="125" y="180" width="30" height="10" rx="2" fill="#D4AF37"/>
+  <rect x="135" y="170" width="10" height="30" rx="2" fill="#D4AF37"/>
+  
+  <!-- Controller Buttons -->
+  <circle cx="205" cy="180" r="7" fill="#D4AF37"/>
+  <circle cx="220" cy="180" r="7" fill="#D4AF37"/>
+  <circle cx="212.5" cy="192.5" r="7" fill="#D4AF37"/>
+  <circle cx="212.5" cy="167.5" r="7" fill="#D4AF37"/>
+  
+  <!-- Code Window -->
+  <rect x="130" y="90" width="140" height="100" rx="5" stroke="#D4AF37" stroke-width="2" fill="#121212"/>
+  
+  <!-- Window Header -->
+  <rect x="130" y="90" width="140" height="20" rx="5" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="140" cy="100" r="3" fill="#D4AF37"/>
+  <circle cx="150" cy="100" r="3" fill="#D4AF37"/>
+  <circle cx="160" cy="100" r="3" fill="#D4AF37"/>
+  
+  <!-- Code Lines -->
+  <line x1="140" y1="125" x2="180" y2="125" stroke="#D4AF37" stroke-width="1.5"/>
+  <line x1="150" y1="135" x2="200" y2="135" stroke="#D4AF37" stroke-width="1.5"/>
+  <line x1="140" y1="145" x2="190" y2="145" stroke="#D4AF37" stroke-width="1.5"/>
+  <line x1="160" y1="155" x2="210" y2="155" stroke="#D4AF37" stroke-width="1.5"/>
+  <line x1="140" y1="165" x2="170" y2="165" stroke="#D4AF37" stroke-width="1.5"/>
+  
+  <!-- Code Brackets -->
+  <path d="M120 140L90 175L120 210" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M230 140L260 175L230 210" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Central Icon -->
+  <circle cx="175" cy="175" r="50" fill="#121212" stroke="#D4AF37" stroke-width="3"/>
+  <text x="175" y="190" font-family="Arial" font-size="50" fill="#D4AF37" text-anchor="middle">S</text>
+  
+  <!-- Gaming Elements -->
+  <path d="M80 250 L90 230 L100 250 L110 230 L120 250" stroke="#D4AF37" stroke-width="2" fill="none"/>
+  <path d="M230 250 L240 230 L250 250 L260 230 L270 250" stroke="#D4AF37" stroke-width="2" fill="none"/>
+  
+  <!-- Pixel Art Elements -->
+  <rect x="90" y="270" width="10" height="10" fill="#D4AF37" opacity="0.7"/>
+  <rect x="100" y="270" width="10" height="10" fill="#D4AF37" opacity="0.5"/>
+  <rect x="110" y="270" width="10" height="10" fill="#D4AF37" opacity="0.7"/>
+  <rect x="90" y="280" width="10" height="10" fill="#D4AF37" opacity="0.5"/>
+  <rect x="100" y="280" width="10" height="10" fill="#D4AF37" opacity="0.7"/>
+  <rect x="110" y="280" width="10" height="10" fill="#D4AF37" opacity="0.5"/>
+  
+  <rect x="230" y="270" width="10" height="10" fill="#D4AF37" opacity="0.7"/>
+  <rect x="240" y="270" width="10" height="10" fill="#D4AF37" opacity="0.5"/>
+  <rect x="250" y="270" width="10" height="10" fill="#D4AF37" opacity="0.7"/>
+  <rect x="230" y="280" width="10" height="10" fill="#D4AF37" opacity="0.5"/>
+  <rect x="240" y="280" width="10" height="10" fill="#D4AF37" opacity="0.7"/>
+  <rect x="250" y="280" width="10" height="10" fill="#D4AF37" opacity="0.5"/>
+  
+  <!-- Connecting Lines -->
+  <line x1="90" y1="90" x2="130" y2="130" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  <line x1="260" y1="90" x2="220" y2="130" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  <line x1="90" y1="260" x2="130" y2="220" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  <line x1="260" y1="260" x2="220" y2="220" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Tech & Gaming Icons -->
+  <rect x="50" y="175" width="20" height="20" rx="2" fill="#D4AF37" opacity="0.6"/>
+  <rect x="280" y="175" width="20" height="20" rx="2" fill="#D4AF37" opacity="0.6"/>
+  <rect x="175" y="50" width="20" height="20" rx="2" fill="#D4AF37" opacity="0.6"/>
+  <rect x="175" y="280" width="20" height="20" rx="2" fill="#D4AF37" opacity="0.6"/>
+  
+  <!-- Gold Gradient Definition -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+  </defs>
+</svg>

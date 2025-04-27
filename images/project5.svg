@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#1E1E1E"/>
+  
+  <!-- QR Code Frame -->
+  <rect x="150" y="50" width="100" height="100" stroke="#D4AF37" stroke-width="3"/>
+  
+  <!-- QR Code Pattern -->
+  <rect x="160" y="60" width="10" height="10" fill="#D4AF37"/>
+  <rect x="170" y="60" width="10" height="10" fill="#D4AF37"/>
+  <rect x="180" y="60" width="10" height="10" fill="#D4AF37"/>
+  <rect x="230" y="60" width="10" height="10" fill="#D4AF37"/>
+  
+  <rect x="160" y="70" width="10" height="10" fill="#D4AF37"/>
+  <rect x="190" y="70" width="10" height="10" fill="#D4AF37"/>
+  <rect x="210" y="70" width="10" height="10" fill="#D4AF37"/>
+  <rect x="230" y="70" width="10" height="10" fill="#D4AF37"/>
+  
+  <rect x="160" y="80" width="10" height="10" fill="#D4AF37"/>
+  <rect x="180" y="80" width="10" height="10" fill="#D4AF37"/>
+  <rect x="200" y="80" width="10" height="10" fill="#D4AF37"/>
+  <rect x="230" y="80" width="10" height="10" fill="#D4AF37"/>
+  
+  <rect x="160" y="90" width="10" height="10" fill="#D4AF37"/>
+  <rect x="180" y="90" width="10" height="10" fill="#D4AF37"/>
+  <rect x="190" y="90" width="10" height="10" fill="#D4AF37"/>
+  <rect x="220" y="90" width="10" height="10" fill="#D4AF37"/>
+  
+  <rect x="160" y="100" width="10" height="10" fill="#D4AF37"/>
+  <rect x="180" y="100" width="10" height="10" fill="#D4AF37"/>
+  <rect x="200" y="100" width="10" height="10" fill="#D4AF37"/>
+  <rect x="210" y="100" width="10" height="10" fill="#D4AF37"/>
+  <rect x="230" y="100" width="10" height="10" fill="#D4AF37"/>
+  
+  <rect x="160" y="110" width="10" height="10" fill="#D4AF37"/>
+  <rect x="170" y="110" width="10" height="10" fill="#D4AF37"/>
+  <rect x="180" y="110" width="10" height="10" fill="#D4AF37"/>
+  <rect x="190" y="110" width="10" height="10" fill="#D4AF37"/>
+  <rect x="200" y="110" width="10" height="10" fill="#D4AF37"/>
+  <rect x="210" y="110" width="10" height="10" fill="#D4AF37"/>
+  <rect x="220" y="110" width="10" height="10" fill="#D4AF37"/>
+  <rect x="230" y="110" width="10" height="10" fill="#D4AF37"/>
+  
+  <rect x="170" y="120" width="10" height="10" fill="#D4AF37"/>
+  <rect x="190" y="120" width="10" height="10" fill="#D4AF37"/>
+  <rect x="210" y="120" width="10" height="10" fill="#D4AF37"/>
+  <rect x="230" y="120" width="10" height="10" fill="#D4AF37"/>
+  
+  <rect x="160" y="130" width="10" height="10" fill="#D4AF37"/>
+  <rect x="180" y="130" width="10" height="10" fill="#D4AF37"/>
+  <rect x="200" y="130" width="10" height="10" fill="#D4AF37"/>
+  <rect x="220" y="130" width="10" height="10" fill="#D4AF37"/>
+  
+  <!-- Scan Lines -->
+  <line x1="130" y1="60" x2="130" y2="140" stroke="#D4AF37" stroke-width="2" opacity="0.7"/>
+  <line x1="135" y1="60" x2="135" y2="140" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+  <line x1="140" y1="60" x2="140" y2="140" stroke="#D4AF37" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Data Flow -->
+  <path d="M270 100 C290 100, 290 70, 310 70" stroke="#D4AF37" stroke-width="2" stroke-dasharray="4 2"/>
+  <path d="M270 100 C290 100, 290 130, 310 130" stroke="#D4AF37" stroke-width="2" stroke-dasharray="4 2"/>
+  
+  <!-- Data Points -->
+  <circle cx="310" cy="70" r="5" fill="#D4AF37"/>
+  <circle cx="310" cy="130" r="5" fill="#D4AF37"/>
+  
+  <!-- Project Name -->
+  <text x="200" y="30" font-family="Arial" font-size="16" fill="#D4AF37" text-anchor="middle">QR CODE GENERATOR</text>
+</svg>

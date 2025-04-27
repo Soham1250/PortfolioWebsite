@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle with Gold Gradient -->
+  <circle cx="175" cy="175" r="170" fill="url(#goldGradient)" opacity="0.1"/>
+  
+  <!-- Tech Circuit Pattern -->
+  <path d="M175 30C175 30 270 80 270 175C270 270 175 320 175 320" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 12"/>
+  <path d="M175 30C175 30 80 80 80 175C80 270 175 320 175 320" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 12"/>
+  
+  <!-- Code Brackets -->
+  <path d="M120 140L90 175L120 210" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M230 140L260 175L230 210" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Central Icon -->
+  <circle cx="175" cy="175" r="50" fill="#121212" stroke="#D4AF37" stroke-width="3"/>
+  <text x="175" y="190" font-family="Arial" font-size="50" fill="#D4AF37" text-anchor="middle">S</text>
+  
+  <!-- Tech Dots -->
+  <circle cx="80" cy="80" r="8" fill="#D4AF37" opacity="0.7"/>
+  <circle cx="270" cy="80" r="8" fill="#D4AF37" opacity="0.7"/>
+  <circle cx="80" cy="270" r="8" fill="#D4AF37" opacity="0.7"/>
+  <circle cx="270" cy="270" r="8" fill="#D4AF37" opacity="0.7"/>
+  
+  <!-- Connecting Lines -->
+  <line x1="90" y1="90" x2="165" y2="165" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  <line x1="260" y1="90" x2="185" y2="165" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  <line x1="90" y1="260" x2="165" y2="185" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  <line x1="260" y1="260" x2="185" y2="185" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Floating Tech Elements -->
+  <rect x="50" y="175" width="20" height="20" rx="2" fill="#D4AF37" opacity="0.6"/>
+  <rect x="280" y="175" width="20" height="20" rx="2" fill="#D4AF37" opacity="0.6"/>
+  <rect x="175" y="50" width="20" height="20" rx="2" fill="#D4AF37" opacity="0.6"/>
+  <rect x="175" y="280" width="20" height="20" rx="2" fill="#D4AF37" opacity="0.6"/>
+  
+  <!-- Gold Gradient Definition -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+  </defs>
+</svg>

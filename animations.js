@@ -185,6 +185,157 @@ class MouseTrail {
     }
 }
 
+// Card Cursor Trail Effect
+class CardCursorTrail {
+    constructor() {
+        this.container = null;
+        this.trails = [];
+        this.maxTrails = 25; // Increased from 15 for more density
+        this.currentItem = null;
+        this.isActive = false;
+        this.mouseX = 0;
+        this.mouseY = 0;
+        this.colors = [
+            'rgba(212, 175, 55, 0.8)',  // Base gold
+            'rgba(255, 215, 0, 0.8)',   // Pure gold
+            'rgba(184, 134, 11, 0.8)',  // Dark gold
+            'rgba(218, 165, 32, 0.8)',  // Golden rod
+            'rgba(238, 232, 170, 0.7)'  // Pale gold
+        ];
+        this.sizes = [8, 12, 16, 20, 24]; // Increased sizes for better visibility
+        this.init();
+    }
+
+    init() {
+        // Create container for trails
+        this.container = document.createElement('div');
+        this.container.className = 'card-cursor-trail-container';
+        document.body.appendChild(this.container);
+
+        // Add mouse move listener
+        document.addEventListener('mousemove', this.handleMouseMove.bind(this));
+
+        // Add listeners to skill items
+        const skillItems = document.querySelectorAll('.skill-item');
+        skillItems.forEach(item => {
+            item.addEventListener('mouseenter', () => this.activateTrail(item));
+            item.addEventListener('mouseleave', () => this.deactivateTrail(item));
+        });
+        
+        // Add listeners to about me cards
+        const aboutCards = document.querySelectorAll('.about-card');
+        aboutCards.forEach(card => {
+            card.addEventListener('mouseenter', () => this.activateTrail(card));
+            card.addEventListener('mouseleave', () => this.deactivateTrail(card));
+        });
+    }
+    
+    handleMouseMove(e) {
+        this.mouseX = e.clientX;
+        this.mouseY = e.clientY;
+        
+        if (this.isActive) {
+            this.addTrail();
+        }
+    }
+
+    activateTrail(item) {
+        this.currentItem = item;
+        this.isActive = true;
+        item.classList.add('trail-active'); // Add active class for enhanced styling
+        
+        // Hide the regular mouse trail when over skill items
+        const mouseTrailElements = document.querySelectorAll('.mouse-trail');
+        mouseTrailElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transition = 'opacity 0.3s ease';
+        });
+    }
+
+    deactivateTrail(item) {
+        this.isActive = false;
+        item.classList.remove('trail-active'); // Remove active class
+        
+        // Clear all trails with a fade out effect
+        const trails = document.querySelectorAll('.card-cursor-trail');
+        trails.forEach(trail => {
+            trail.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            trail.style.opacity = '0';
+            trail.style.transform = 'scale(0.5)';
+            
+            setTimeout(() => {
+                if (trail.parentNode) {
+                    trail.parentNode.removeChild(trail);
+                }
+            }, 500);
+        });
+        
+        // Show the regular mouse trail again
+        setTimeout(() => {
+            const mouseTrailElements = document.querySelectorAll('.mouse-trail');
+            mouseTrailElements.forEach(el => {
+                el.style.opacity = '1';
+            });
+        }, 300);
+        
+        this.currentItem = null;
+        this.trails = [];
+    }
+
+    addTrail() {
+        if (this.trails.length >= this.maxTrails) {
+            const oldestTrail = this.trails.shift();
+            if (oldestTrail && oldestTrail.parentNode) {
+                oldestTrail.style.opacity = '0';
+                oldestTrail.style.transform = 'scale(0.5)';
+                
+                setTimeout(() => {
+                    if (oldestTrail.parentNode) {
+                        oldestTrail.parentNode.removeChild(oldestTrail);
+                    }
+                }, 300);
+            }
+        }
+
+        const trail = document.createElement('div');
+        trail.className = 'card-cursor-trail';
+        
+        // Random properties for variety
+        const size = this.sizes[Math.floor(Math.random() * this.sizes.length)];
+        const color = this.colors[Math.floor(Math.random() * this.colors.length)];
+        
+        trail.style.width = `${size}px`;
+        trail.style.height = `${size}px`;
+        trail.style.left = `${this.mouseX}px`;
+        trail.style.top = `${this.mouseY}px`;
+        trail.style.backgroundColor = color;
+        
+        // Add a slight random offset for more organic feel
+        const offsetX = (Math.random() - 0.5) * 10;
+        const offsetY = (Math.random() - 0.5) * 10;
+        trail.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        
+        this.container.appendChild(trail);
+        this.trails.push(trail);
+        
+        // Fade out and remove after delay
+        setTimeout(() => {
+            trail.style.opacity = '0';
+            trail.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(0.5)`;
+            
+            setTimeout(() => {
+                if (trail.parentNode) {
+                    trail.parentNode.removeChild(trail);
+                    const index = this.trails.indexOf(trail);
+                    if (index > -1) {
+                        this.trails.splice(index, 1);
+                    }
+                }
+            }, 1000);
+        }, 1000);
+    }
+}
+
 // Section animations
 function animateSections() {
     const sections = document.querySelectorAll('section');
@@ -256,22 +407,35 @@ function floatingAnimation() {
 }
 
 // Initialize all animations when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize mouse trail
-    new MouseTrail();
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize existing animations
+    const mouseTrail = new MouseTrail();
+    window.mouseTrail = mouseTrail; // Make it globally accessible
     
-    // Initialize section animations
-    animateSections();
-    
-    // Initialize skill item animations
-    animateSkillItems();
+    // Initialize skill card animations
+    const skillCards = document.querySelectorAll('.skill-card');
+    skillCards.forEach(card => {
+        animateOnScroll(card, 'animate__fadeInUp');
+    });
     
     // Initialize project card animations
-    animateProjectCards();
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        animateOnScroll(card, 'animate__fadeInUp');
+    });
     
-    // Initialize typing effect
+    // Initialize section animations
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        animateOnScroll(section, 'animate__fadeIn');
+    });
+    
+    // Initialize typewriter effect
     typeWriterEffect();
     
-    // Initialize floating animation
+    // Initialize floating animation for profile image
     floatingAnimation();
+    
+    // Initialize card cursor trail
+    const cardCursorTrail = new CardCursorTrail();
 });

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#1E1E1E"/>
+  
+  <!-- Doctor Buddy App Interface -->
+  <rect x="120" y="40" width="160" height="140" rx="10" stroke="#D4AF37" stroke-width="2"/>
+  
+  <!-- App Header -->
+  <rect x="120" y="40" width="160" height="30" rx="10" fill="#D4AF37" opacity="0.2"/>
+  <text x="200" y="60" font-family="Arial" font-size="12" fill="#D4AF37" text-anchor="middle">DOCTOR BUDDY</text>
+  
+  <!-- Medical Cross Icon -->
+  <rect x="190" y="80" width="20" height="60" rx="2" fill="#D4AF37" opacity="0.7"/>
+  <rect x="170" y="100" width="60" height="20" rx="2" fill="#D4AF37" opacity="0.7"/>
+  
+  <!-- Patient List -->
+  <rect x="130" y="80" width="30" height="5" rx="1" fill="#D4AF37" opacity="0.5"/>
+  <rect x="130" y="90" width="30" height="5" rx="1" fill="#D4AF37" opacity="0.5"/>
+  <rect x="130" y="100" width="30" height="5" rx="1" fill="#D4AF37" opacity="0.5"/>
+  <rect x="130" y="110" width="30" height="5" rx="1" fill="#D4AF37" opacity="0.5"/>
+  <rect x="130" y="120" width="30" height="5" rx="1" fill="#D4AF37" opacity="0.5"/>
+  <rect x="130" y="130" width="30" height="5" rx="1" fill="#D4AF37" opacity="0.5"/>
+  
+  <!-- Calendar -->
+  <rect x="240" y="80" width="30" height="30" rx="2" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+  <rect x="240" y="115" width="30" height="30" rx="2" stroke="#D4AF37" stroke-width="1" opacity="0.5"/>
+  <rect x="245" y="85" width="5" height="5" rx="1" fill="#D4AF37" opacity="0.7"/>
+  <rect x="255" y="85" width="5" height="5" rx="1" fill="#D4AF37" opacity="0.7"/>
+  <rect x="245" y="95" width="5" height="5" rx="1" fill="#D4AF37" opacity="0.7"/>
+  <rect x="255" y="95" width="5" height="5" rx="1" fill="#D4AF37" opacity="0.7"/>
+  
+  <!-- Stethoscope -->
+  <circle cx="310" cy="100" r="15" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  <path d="M310 115 L310 140" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  <path d="M310 140 C310 140, 290 140, 290 130" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  <path d="M310 140 C310 140, 330 140, 330 130" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Project Name -->
+  <text x="200" y="30" font-family="Arial" font-size="16" fill="#D4AF37" text-anchor="middle">DOCTOR BUDDY</text>
+</svg>

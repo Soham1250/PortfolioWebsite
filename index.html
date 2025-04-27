@@ -3,21 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soham - Full Stack Developer</title>
+    <meta name="description" content="Soham Pansare - Full Stack Developer specializing in modern web applications with cutting-edge technologies">
+    <meta name="keywords" content="full stack developer, web developer, portfolio, Soham Pansare, frontend, backend">
+    <meta name="author" content="Soham Pansare">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Soham Pansare | Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer specializing in modern web applications with cutting-edge technologies">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soham-portfolio.netlify.app/">
+    <meta property="og:image" content="images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <title>Soham Pansare | Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Font with display swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="#home">Soham</a>
+                <a href="#home">
+                    <span class="logo-text">S</span>
+                    <span class="logo-full">Soham</span>
+                </a>
             </div>
             <div class="nav-links" id="navLinks">
                 <i class="fas fa-times mobile-only" id="closeMenu"></i>
@@ -34,19 +56,41 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Soham</span></h1>
-            <h2>Full Stack Developer</h2>
-            <p>I build robust and scalable web & mobile applications</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary-btn">View Projects</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
-            </div>
-            <div class="social-icons">
-                <a href="https://github.com/Soham1250" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="hero-background">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <h1>Soham Pansare</h1>
+                    <h2 class="typewriter-text">Full Stack Developer</h2>
+                    <p>I build modern, responsive, and user-friendly web applications with cutting-edge technologies.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i>View Projects</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i>Contact Me</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/Soham1250" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:soham.pansare1250@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="images/dev-gamer-profile.svg" alt="Developer and Gamer Illustration" class="profile-image" loading="eager">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <div class="section-divider">
+        <img src="images/wave-divider.svg" alt="Section divider">
+    </div>
 
     <section id="about" class="about">
         <div class="section-header">
@@ -82,6 +126,10 @@
             </div>
         </div>
     </section>
+
+    <div class="section-divider divider-flip">
+        <img src="images/wave-divider.svg" alt="Section divider">
+    </div>
 
     <section id="skills" class="skills">
         <div class="container">
@@ -215,6 +263,10 @@
     </div>
     </section>
 
+    <div class="section-divider">
+        <img src="images/wave-divider.svg" alt="Section divider">
+    </div>
+
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
@@ -223,163 +275,255 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/project1.svg" alt="SecureMe Project" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <h3>SecureMe</h3>
                         <p>An application that detects <span class="highlight-word">malicious</span> links and URLs to <span class="highlight-word">protect</span> users and their devices from <span class="highlight-word">security</span> threats. Features security <span class="highlight-word">scoring</span>, detailed threat <span class="highlight-word">analysis</span>, and verdict classification.</p>
                         <div class="project-tech">
-                            <span>Node.js</span>
-                            <span>Express</span>
-                            <span>MongoDB</span>
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>VirusTotal API</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">VirusTotal API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Soham1250/SecureMe" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/Soham1250/SecureMe" class="demo"><i class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="https://github.com/Soham1250/SecureMe" class="code"><i class="fab fa-github"></i>View Code</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/project2.svg" alt="Facial Recognition SDK Project" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <h3>Facial Recognition SDK</h3>
                         <p>A Python-based <span class="highlight-word">facial</span> recognition system that can be <span class="highlight-word">integrated</span> into various applications for <span class="highlight-word">security</span> and <span class="highlight-word">authentication</span>.</p>
                         <div class="project-tech">
-                            <span>Python</span>
-                            <span>OpenCV</span>
-                            <span>TensorFlow</span>
-                            <span>Flask</span>
-                            <span>Docker</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Docker</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Soham1250/Facial_Recognition_sdk.git" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/Soham1250/Facial_Recognition_sdk.git" class="demo"><i class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="https://github.com/Soham1250/Facial_Recognition_sdk.git" class="code"><i class="fab fa-github"></i>View Code</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/project3.svg" alt="StudentPortal Project" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <h3>StudentPortal</h3>
                         <p>A comprehensive Flutter application for <span class="highlight-word">managing</span> student <span class="highlight-word">information</span>, <span class="highlight-word">attendance</span>, and <span class="highlight-word">academic</span> performance.</p>
                         <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>Firebase</span>
-                            <span>Provider</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Provider</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Soham1250/student_dashboard.git" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/Soham1250/student_dashboard.git" class="demo"><i class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="https://github.com/Soham1250/student_dashboard.git" class="code"><i class="fab fa-github"></i>View Code</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/project4.svg" alt="DoctorBuddy Project" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <h3>DoctorBuddy</h3>
                         <p>A Flutter-based clinic management application with <span class="highlight-word">role-based</span> interfaces for doctors and receptionists. Features <span class="highlight-word">digital prescriptions</span>, <span class="highlight-word">appointment scheduling</span>, <span class="highlight-word">patient history</span> tracking, and a <span class="highlight-word">responsive</span> design for both mobile and tablet devices.</p>
                         <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>Drawing Board</span>
-                            <span>Table Calendar</span>
-                            <span>PDF</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Drawing Board</span>
+                            <span class="tech-tag">Table Calendar</span>
+                            <span class="tech-tag">PDF</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Soham1250/DoctorBuddy.git" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/Soham1250/DoctorBuddy.git" class="demo"><i class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="https://github.com/Soham1250/DoctorBuddy.git" class="code"><i class="fab fa-github"></i>View Code</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/project5.svg" alt="QR Code Generator Project" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <h3>QR Code Generator</h3>
                         <p>A JavaScript application that <span class="highlight-word">generates</span> QR codes for <span class="highlight-word">different</span> types of <span class="highlight-word">data</span>.</p>
                         <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>QRCode.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">QRCode.js</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Soham1250/QR_Code_generator.git" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/Soham1250/QR_Code_generator.git" class="demo"><i class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="https://github.com/Soham1250/QR_Code_generator.git" class="code"><i class="fab fa-github"></i>View Code</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/project6.svg" alt="DiceWars Project" loading="lazy">
+                    </div>
                     <div class="project-content">
                         <h3>DiceWars</h3>
                         <p>An <span class="highlight-word">interactive</span> dice game built with JavaScript that simulates <span class="highlight-word">strategic</span> territory <span class="highlight-word">conquest</span> through <span class="highlight-word">dice</span> rolls.</p>
                         <div class="project-tech">
-                            <span>JavaScript</span>
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>Canvas</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Canvas</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Soham1250/DiceWars.git" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/Soham1250/DiceWars.git" class="demo"><i class="fas fa-external-link-alt"></i>Live Demo</a>
+                            <a href="https://github.com/Soham1250/DiceWars.git" class="code"><i class="fab fa-github"></i>View Code</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="section-divider divider-flip">
+        <img src="images/wave-divider.svg" alt="Section divider">
+    </div>
+
+    <section id="why-me" class="why-me">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Me</h2>
+                <div class="underline"></div>
+                <p>What sets me apart as a developer</p>
+            </div>
+            <div class="why-me-grid">
+                <div class="why-me-card">
+                    <div class="why-me-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Clean Code</h3>
+                    <p>I write maintainable, well-documented code following best practices and design patterns. My code is built to last and scale with your business.</p>
+                </div>
+                
+                <div class="why-me-card">
+                    <div class="why-me-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>I understand the importance of deadlines and deliver high-quality solutions on time. My efficient workflow ensures quick turnaround without sacrificing quality.</p>
+                </div>
+                
+                <div class="why-me-card">
+                    <div class="why-me-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Every project I build is fully responsive and tested across all devices. Your users will have a seamless experience whether on desktop, tablet, or mobile.</p>
+                </div>
+                
+                <div class="why-me-card">
+                    <div class="why-me-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Problem Solver</h3>
+                    <p>I approach each project as a problem to solve, not just code to write. I focus on understanding the core needs and delivering solutions that truly work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <img src="images/wave-divider.svg" alt="Section divider">
+    </div>
 
     <section id="contact" class="contact">
         <div class="section-header">
             <h2>Contact Me</h2>
             <div class="underline"></div>
+            <p>Let's work together on your next project</p>
         </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Get In Touch</h3>
-                <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>soham.pansare1250@gmail.com</p>
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3><i class="fas fa-user"></i>Contact Information</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info">
+                                    <h4>Email</h4>
+                                    <p>soham.pansare1250@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="info">
+                                    <h4>Phone</h4>
+                                    <p>+91 9876543210</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info">
+                                    <h4>Location</h4>
+                                    <p>Mumbai, India</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Mumbai, India</p>
+                    <div class="contact-card">
+                        <h3><i class="fas fa-share-alt"></i>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/Soham1250" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="mailto:soham.pansare1250@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="social-links">
-                    <a href="https://github.com/Soham1250" target="_blank"><i class="fab fa-github"></i></a>
+                <div class="contact-form">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                        </div>
+                    </form>
                 </div>
-            </div>
-            <div class="contact-form">
-                <h3>Send Me A Message</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" name="name" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
-
-    <!--  Alert Modal -->
-    <div id="cuteAlert" class="cute-alert">
-        <div class="cute-alert-content">
-            <div class="cute-alert-icon">
-                <i class="fas fa-heart"></i>
-            </div>
-            <h3 class="cute-alert-title">I'll be back! 💗</h3>
-            <p class="cute-alert-message">Thanks for reaching out! Your contact information has been saved. I'll get back to you super soon!</p>
-            <button id="cuteAlertClose" class="btn primary-btn cute-alert-btn">OK</button>
-        </div>
-    </div>
 
     <footer>
         <div class="footer-content">
@@ -401,6 +545,9 @@
                 <h4>Connect With Me</h4>
                 <div class="social-icons">
                     <a href="https://github.com/Soham1250" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:soham.pansare1250@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -409,7 +556,20 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="animations.js"></script>
+    <!--  Alert Modal -->
+    <div id="cuteAlert" class="cute-alert">
+        <div class="cute-alert-content">
+            <div class="cute-alert-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="cute-alert-title">I'll be back! 💗</h3>
+            <p class="cute-alert-message">Thanks for reaching out! Your contact information has been saved. I'll get back to you super soon!</p>
+            <button id="cuteAlertClose" class="btn primary-btn cute-alert-btn">OK</button>
+        </div>
+    </div>
+
+    <!-- Scripts with defer to prevent render blocking -->
+    <script src="script.js" defer></script>
+    <script src="animations.js" defer></script>
 </body>
 </html>
