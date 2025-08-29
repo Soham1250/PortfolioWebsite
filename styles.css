@@ -38,6 +38,7 @@ body {
     color: var(--text-color);
     line-height: 1.7;
     font-size: 1rem;
+    overflow-x: hidden; /* avoid sideways scroll on mobile */
 }
 
 a {
@@ -284,6 +285,63 @@ section {
 @media screen and (min-width: 769px) {
     .mobile-only {
         display: none !important;
+    }
+}
+
+/* Mobile Navigation (<=768px): show hamburger and slide-in menu */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+    .mobile-only {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        max-width: 340px;
+        background-color: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: -8px 0 24px rgba(0,0,0,0.5);
+        transition: right 0.3s ease;
+        z-index: 1500;
+        padding: 80px 24px 24px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links ul li {
+        margin-left: 0;
+    }
+
+    .nav-links ul li a {
+        display: block;
+        padding: 12px 10px;
+        font-size: 1.05rem;
+    }
+
+    /* Close icon inside panel */
+    #closeMenu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Reduce logo text to save space */
+    .logo-full {
+        font-size: 1.2rem;
     }
 }
 
@@ -599,6 +657,131 @@ section {
     }
 }
 
+/* Comprehensive Mobile Responsiveness */
+
+/* Extra small devices (phones, 320px and up) */
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .why-me-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* Small devices (landscape phones, 480px and up) */
+@media screen and (max-width: 480px) {
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .container {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+    
+    section {
+        padding: 50px 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form-control {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .image-container {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Medium devices (tablets, 576px and up) */
+@media screen and (max-width: 576px) {
+    section {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-wrapper {
+        gap: 20px;
+    }
+    
+    .about-content {
+        gap: 20px;
+    }
+    
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
 /* About Section */
 .about {
     background-color: var(--dark-color);
@@ -797,7 +980,7 @@ section {
 /* Enhanced Project Cards */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 50px;
 }
@@ -945,7 +1128,7 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 30px;
     margin-top: 50px;
 }
@@ -1679,152 +1862,7 @@ footer {
     }
 }
 
-/* Media Queries */
-@media screen and (max-width: 991px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 120px;
-    }
-    
-    .hero-content {
-        margin-bottom: 50px;
-    }
-    
-    .hero-buttons, .social-icons {
-        justify-content: center;
-    }
-    
-    .about-content {
-        flex-direction: column;
-    }
-    
-    .about-buttons {
-        justify-content: center;
-    }
-    
-    .about-text {
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .mobile-only {
-        display: block;
-    }
-    
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: rgba(18, 18, 18, 0.98);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1001;
-        transition: all 0.5s ease;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-    }
-    
-    .nav-links.active {
-        right: 0;
-    }
-    
-    .nav-links ul {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .nav-links ul li {
-        margin: 15px 0;
-    }
-    
-    .nav-links ul li a {
-        font-size: 1.2rem;
-    }
-    
-    .fa-times {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 1.5rem;
-    }
-    
-    /* Adjust hero section padding for mobile */
-    .hero {
-        padding-top: 100px;
-    }
-    
-    .section-header h2 {
-        font-size: 2rem;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-content h2 {
-        font-size: 1.5rem;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contact-container {
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .hero-buttons {
-        flex-direction: column;
-    }
-    
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .section-header h2 {
-        font-size: 1.8rem;
-    }
-    
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .fa-bars, .fa-times {
-        display: none;
-    }
-}
-
-/* Responsive Project Cards */
-@media screen and (max-width: 991px) {
-    .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .project-card {
-        max-width: 100%;
-    }
-}
+/* Remove duplicate media queries - handled above */
 
 /* Why Choose Me Section */
 .why-me {
@@ -1911,7 +1949,88 @@ footer {
 
 .why-me-card p {
     color: var(--text-color);
-    line-height: 1.6;
+}
+
+/* Additional overflow fixes */
+.hero-background .shape {
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.section-divider {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.section-divider img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix card cursor trail container */
+.card-cursor-trail-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    overflow: hidden;
+}
+
+.card-cursor-trail {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: opacity 1s ease, transform 1s ease;
+    will-change: opacity, transform;
+}
+
+/* Ensure all images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Fix any potential width issues with form elements */
+input, textarea, select {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure buttons don't overflow */
+.btn {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+/* Fix tech tags wrapping */
+.tech-tag {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.project-tech {
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+/* Ensure social icons don't cause overflow */
+.social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-links {
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
